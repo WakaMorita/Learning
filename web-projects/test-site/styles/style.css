@@ -1,0 +1,76 @@
+/* CSS HTMLの要素を選択的にスタイルするためのスタイルシート言語 https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/CSS_basics
+
+    p {
+    color: red;
+  }
+
+  ルールセット   ：上記のような全体の構造。
+  p             :セレクター。ルールセットの先頭にあるHTMLの要素名。
+  color         :プロパティ。影響を与えたいプロパティを指定する。
+  red           :プロパティ値。プロパティに設定したい外観を設定する。
+  color: red;   :宣言。単一のルールで要素のプロパティのうち変更したいものを指定する。
+
+  セレクターの種類 https://developer.mozilla.org/ja/docs/Learn/CSS/Building_blocks/Selectors
+  要素セレクター        ：p<p>
+  IDセレクター          ：my-id<p id="my-id">or<a id="my-id"> >
+  クラスセレクター      ：.my-class<p class="my-class">or<a class="my-class">
+  属性セレクター　      ：img[src]<img src="myimage.png">
+  擬似クラスセレクター  :a:hover　<a> を、マウスポインターがリンク上にあるときのみ選択
+
+  box構造
+  padding: コンテンツの周囲のスペースです。以下の例では、段落テキストの周りのスペースです。
+  border: padding のすぐ外側にある実線
+  margin: 要素の外側の周りの空間
+
+*/
+
+/* 複数セレクターやプロパティの選択も可能 */
+/* p, li, h1 { 
+    color: red;
+    width: 500px;
+    border: 1px solid black;
+  } */
+
+  html {
+    font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
+    font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
+    background-color: #00539F; /* ページ全体の背景色に設定を行う  */
+  }
+
+  body {
+    width: 600px; /* bodyの幅が600ピクセルになる  */
+    margin: 0 auto; /*  margin や padding などのプロパティに 2 つの値を設定すると、最初の値は要素の上下の辺に影響、2 番目の値は左右に影響する。auto は残った水平方向の余白を左右に均等に配分する特別な値  */
+    background-color: #FF9500; /* body全体の背景色に設定を行う  */
+    padding: 0 20px 20px 20px; /*  4 つの値を設定する。値は上・右・下・左の順  */
+    border: 5px solid black; /*  境界の太さ、スタイル、色の値  */
+  }
+  
+  h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: #00539F;
+    /*  
+    最初はピクセル値で、影のテキストからの水平オフセット、どれだけ横に移動するかを設定
+    2 番目はピクセル値で、影のテキストから垂直オフセット、どれだけ下に移動するかを設定
+    3 番目のピクセル値で、影をぼかす半径を設定します。値が大きいほどぼやけた影を生成
+    4 番目の値は、影の基本色を設定  
+    */
+    text-shadow: 3px 3px 1px black; 
+  }
+
+  /*  
+    画像はインライン要素。
+    インライン要素にマージンやその他の余白を開ける値を適用することはできない。
+    画像にマージンを適用するには、display: block; を使用して画像にブロックレベルの動作を指定する必要がある
+    */
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  p, li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: blue;
+  }
