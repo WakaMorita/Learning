@@ -1,13 +1,55 @@
-<!DOCTYPE html>
-<html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>テストページ</title>
+<!-- 
+    HTML　コンテンツの構造を定義するマークアップ言語
+    
+
+    <p class="editor-note">My cat is very grumy</p>
+    
+    <p>         開始タグ。要素の名前を山括弧で囲ったもの
+    </p>        終了タグ。　/が入った要素の名前を山括弧で囲ったもの
+    コンテンツ  要素の内容。開始タグと終了タグで囲まれた中身
+    要素        開始タグ、終了タグ、コンテンツで要素を構成する。ネスト可能。コンテンツを持たない空要素もあり、終了タグもない。
+                (空要素の例　<img src="images/sample.jfif" alt="Firefox のロゴ: 世界を囲む燃える狐">)
+    属性        コンテンツには表示させない追加情報。
+
+ -->
+<!DOCTYPE html> <!-- 文書型宣言(必須) -->
+<html lang="ja"> <!-- ページの全ての要素を囲む。ルート要素。HTML要素。文書の主要言語のlang属性も指定する。　 -->
+    <head> <!-- ページ閲覧者に向けて表示するためのコンテンツでないHTMLページに含めたいものを収める入れ物。検索エンジン向けの キーワード やページのディスクリプション（説明書き）、ページの見た目を変更するための CSS、文字コードの宣言など -->
+        <meta charset="utf-8"> <!-- 文字コードをUTF-8に設定する。 -->
+        <meta name="viewport" content="width=device-width"> <!-- このページがある幅のビューポートで描画されることを保証し、モバイルブラウザーがビューポートより広い幅でページを描画した上で縮小して表示するのを防止する。 -->
+        <title>テストページ</title> <!-- ページのタイトル。ブラウザのタブ、ブックマーク、お気に入りの登録名に使われる。 -->
     </head>
-    <body>
-        <!-- /で一つ下のディレクトリ　 -->
-        <img src="images/sample.jfif" alt="Firefox のロゴ: 世界を囲む燃える狐">
-        <!-- ../で一つ上のディレクトリ　 -->
-        <img src="../flower.jfif" alt="花 のロゴ: コスモス？">
+    <body> <!-- テキスト、画像、ビデオ、ゲーム、再生可能な音声トラックなど、ページを訪れたウェブの利用者に表示したいすべてのコンテンツを含む　 -->
+        <h1>学習用画面</h1>
+        <h2>画像を埋め込む</h2>
+            <h3>画像1</h3>
+            <!-- /で一つ下のディレクトリ　 -->
+            <img src="images/sample.jfif" alt="Firefox のロゴ: 世界を囲む燃える狐"><!-- src(source)属性：ファイルパスを持つ　alt(alternative)属性：何らかの理由で表示が不可、もしくは画面リーダーで読み上げられる内容 -->
+            <p>This is a Firefox</p>
+            <h3>画像2</h3>
+            <!-- ../で一つ上のディレクトリ　 -->
+            <img src="../flower.jfif" alt="花 のロゴ: コスモス？">
+            <p>This is a flower</p>
+        <h2>リストの練習</h2>
+        <!-- 順序無しリスト -->
+            <h3>順序無しリスト</h3>
+                <p>At Mozilla, we're a global community of</p>
+                <ul>
+                    <li>technologists</li>
+                    <li>thinkers</li>
+                    <li>builders</li>
+                </ul>
+                <p>working together… </p>
+        <!-- 順序有りリスト -->
+            <h3>順序有りリスト</h3>
+                <p>At Mozilla, we're a global community of</p>
+                <ol>
+                    <li>technologists</li>
+                    <li>thinkers</li>
+                    <li>builders</li>
+                </ol>
+                <p>working together… </p>
+        <h2>リンクの練習</h2>
+        <a href="https://developer.mozilla.org/ja/docs/Learn/Getting_started_with_the_web/HTML_basics">Mozilla Manifesto</a>
     </body>
 </html>
