@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>My test page</title>
+    </head>
+    <body>
+        <h1>Main Title</h1>
+        <p>my favorite Game! <strong>Splatoon!</strong>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Splatoon3.png">
+        <a href="https://www.nintendo.co.jp/switch/av5ja/index.html" title="Splatoon's website" target="_blank"></a>
+        </p>
+        
+    </body>
+</html>
+
+
+<p>
+    <h1>ここからは学習用メモ</h1>
+    <em>This is my text</em> <!-- イタリック体(斜体) -->
+
+    <!-- 入れ子にする -->
+    <p>My cat is <strong>very grumpy.</strong></p>
+    
+    <!-- インライン要素とブロックレベル要素 -->
+    <em>first</em><em>second</em><em>third</em><!--1行-->
+    <p>first</p><p>second</p><p>third</p><!--ブロックで、改行されてる-->
+    
+    <!-- 空要素 -->
+    <img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"><!--開始タグと終了タグ無し-->
+    
+    <!-- 属性 -->
+    <p>A link to my 
+        <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_brank">favorite website</a>
+        .
+    </p>
+    
+    <!-- 論理属性 -->
+    <p>
+        <input type="text" disabled="disable">
+        <input type="text" disabled><!--属性指定を省略出来る(論理属性)-->
+        <input type="text"><!--属性指定をしない-->
+    </p>
+        
+    <!-- 属性値の引用符の省略 -->
+    <a href=https://www.mozilla.org/>favorite websites</a>
+    <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a><!--不備が生まれやすいので非推奨-->
+    
+    <!--二重引用符か単一引用符か-->
+    <p>
+        <a href="https://www.example.com">A link to my example.</a>
+        <a href='https://www.example.com'>A link to my example.</a>
+        <!-- 混在は不可。ただし文章中に使われている場合は別の引用符で記載可能 -->
+        <a href="https://www.example.com" title="Isn't this fun?">A link to my example.</a>
+        <!-- 同じ引用符を文章中に使われている場合はHTMLエンティティで代用する。 -->
+        <a href="https://www.example.com" title='Isn&apos;t this fun?'>A link to my example.</a>
+    </p>
+
+    <!-- 特殊文字
+    < :&lt;
+    > :&gt;
+    " :&quot;
+    ' :&apos;
+    & :&amp;
+    -->
+    <p>HTML では、<p>要素で段落を定義します。</p>
+    <p>HTML では、&lt;p&gt;要素で段落を定義します。</p>
+</p>
+
+
