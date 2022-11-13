@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+    <p>I'm creating a link to
+      <a href="https://www.mozilla.org/ja/" title="The best place to find more information about Mozilla's
+      mission and how to contribute">the Mozilla homepage</a>.
+    </p>
+
+    <h1>Game Introduction</h1>
+    <h2><a href="https://www.nintendo.co.jp/switch/av5ja/index.html" title="Action shooting game where you shoot ink">Splatoon</a></h2>
+    <a href="https://www.nintendo.co.jp/switch/av5ja/index.html">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Splatoon3.png" alt="Splatoon3 homepage">
+    </a>
+    <p>Splatoon[a] is a 2015 third-person shooter video game developed and published by Nintendo for the Wii U. The game centers around Inklings—anthropomorphic cephalopodic lifeforms that can transform between humanoid and cephalopod forms and frequently engage in turf wars with each other and use a variety of weapons that produce and shoot colored ink while in humanoid form, or swim and hide in surfaces covered in their own colored ink while in their cephalopodic forms. Splatoon features several different game modes, including four-on-four online multiplayer and a single player campaign.</p>
+    <h2 id="Mailing_addres">Mailing address</h2>
+    <p>Want to write us a letter? Use our <a href="link.html#Mailing_address">mailing address</a>.</p>
+    <p>The <a href="#Mailing_address">company mailing address</a> can be found at the bottom of this page.</p>
+
+    <!-- そのリンクを押すと何が起こるか明示するべき -->
+    <p><a href="https://www.example.com/large-report.pdf">
+      販売レポートをダウンロード (PDF, 10MB)
+    </a></p>
+    
+    <p><a href="https://www.example.com/video-stream/" target="_blank">
+      動画を見る（別なタブで HD 品質のストリーミングが開きます）
+    </a></p>
+    
+    <p><a href="https://www.example.com/car-game">
+      カーゲームで遊ぶ（Flash が必要）
+    </a></p>
+    <!-- ダウンロードが始まるリソースへのリンクはダウンロード属性を利用する -->
+    <a href="https://download.mozilla.org/?product=firefox-latest-ssl&os=win64&lang=en-US"
+      download="firefox-latest-64bit-installer.exe">
+      Download Latest Firefox for Windows (64-bit) (English, US)
+    </a>
+
+    <ul>
+      <li>Home</li>
+      <li><a href="pictures.html">Pictures</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="social.html">Socail</a></li>
+    </ul>
+
+    <h1>Homepage</h1>
+
+    <p>Welcome to my exciting homepage</p>
+
+
+    <a href="mailto:nowhere@mozilla.org">メールをどこにも送信しません</a>
+
+    <!-- 
+      サンプル
+      mailto:
+      mailto:nowhere@mozilla.org
+      mailto:nowhere@mozilla.org,nobody@mozilla.org
+      mailto:nowhere@mozilla.org?cc=nobody@mozilla.org
+      mailto:nowhere@mozilla.org?cc=nobody@mozilla.org&subject=This%20is%20the%20subject
+
+      リンクとオプションの間には?を入れる
+      各オプションはフィールド名=で指定
+      オプションとオプションのつなぎ目は&でつなぐ
+      %20は「　」 (半角空白)
+    -->
+    <a href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+        Send mail with cc, bcc, subject and body
+    </a>
+    <!-- 
+    ディレクトリ移動
+  同ディレクトリ　そのままフォルダやファイルの指定
+  サブディレクトリ　同ディレクトリのフォルダ名を指定して/で区切ってファイル指定
+  親ディレクトリ　../で一個上の階層に移動する
+  
+  相対パスはindex.htmlが基準になる
+  -->
+  </body>
+</html>
