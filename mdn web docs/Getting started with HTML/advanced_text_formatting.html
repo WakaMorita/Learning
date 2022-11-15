@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <!-- 説明リスト -->
+        <dl>
+            <dt>独り言 (soliloquy)</dt>
+            <dd>
+                ドラマで、登場人物が自分自身にしゃべりかけ、内なる考えや感情や、そうなった過程を（他の登場人物ではなく）観客に対して表現するものです。
+            </dd>
+            <dt>独白 (monologue)</dt>
+            <dd>
+                ドラマで、登場人物が自分の考えを観客や他の登場人物に伝わるように喋るものです。
+            </dd>
+            <dt>傍白 (aside)</dt>
+            <dd>
+                ドラマで、登場人物が観客のみに対し、ユーモアやドラマチックな効果を狙ってコメントをします。これは通常は感情や、考えや、追加の背景情報です。
+            </dd>
+            <dd>
+                文章では、現在のトピックに関連するコンテンツの一部ですが、本文の流れに直接合わないため、近くに表示されます（多くの場合、横に並んでいる枠の中に入ります）。
+            </dd>
+        </dl>
+        <dl>
+            <dt>Bacon</dt>
+            <dd>The glue that binds the world together.</dd>
+            <dt>Eggs</dt>
+            <dd>The glue that binds the cake together.</dd>
+            <dt>Coffee</dt>
+            <dd>The drink that gets the world running in the morning.</dd>
+            <dd>A light brown color.</dd>
+        </dl>
+
+        <!-- ブロック引用 -->
+        <p>こちらが引用です。</p>
+        <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+            <p>
+                The <strong>HTML<code>&lt;blockquote&gt;</code>Element</strong>
+                (or <em>HTML Block Quotation Element</em> )indicates that the enclosed text is an extended quotation.
+            </p>
+        </blockquote>
+
+        <!-- インライン引用 -->
+        <p>The quate element - <code>&lt;q&gt;</code> - is <q cite="https://developer.mozilla.org/ja/docs/Web/HTML/Element/q">
+            intended for short quotation that don't require paragraph breaks.
+        </q></p>
+
+        <p>
+            Hello and welcome to my motivation page. As 
+            <a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><em>Confucius' quotes site</em></a> 
+            says:
+        </p>
+        <blockquote cite="http://www.brainyquote.com/quotes/authors/c/confucius.html">
+            <p>It does not matter how slowly you go as long as you do not stop.</p>
+        </blockquote>
+        <p>
+            I also love the concept of positive thinking, and 
+            <q>The Need To Eliminate Negative Self Talk</q>(as mentioned in 
+            <a href="http://example.com/affirmationsforpositivethinking"><em>Affirmations for Positive Thinking</em></a>.)
+        </p>
+
+        <!-- 略語 -->
+        <p>We use <abbr>HTML</abbr>,Hypertext Markup Language, to structure our web document.</p>
+        <p>I think <abbr title="Reverend">Rev.</abbr> Green did it in the kitchen with the chainsaw.</p>
+        <p><abbr title="National Aeronautics and Space Administration">NASA</abbr>, the National Aeronautics and Space Administration, sure does some exciting work.</p>
+
+        <!-- 詳細な連絡先のマークアップ -->
+        <address>
+            <p>Chris Mills, Manchester, The Grim North, UK</p>
+        </address>
+
+        <address>
+            <p>
+                Chris Mills<br>
+                Manchester<br>
+                The Grim North<br>
+                UK
+            </p>
+
+            <ul>
+                <li>Tel: 01234 567 890</li>
+                <li>Email: me@grim-north.co.uk</li>
+            </ul>
+        </address>
+
+        <address>
+            Page Written by <a href="../authors/chris-mills/">Chris Mills</a>.
+        </address>
+        
+        <!-- 
+            上付きと下付き 
+        sup:上付き
+        sub:下付き
+        -->
+        <P>My birthday is on the 25<sup>th</sup> of May 2001.</P>
+        <p>Caffeine's chemical formula is C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>.</p>
+        <p>If x<sup>2</sup> is 9, x<sup>2</sup> is 9, x must equal 3 or -3.</p>
+
+        <!-- 
+            コンピューターのコード
+        pre: 入力したとおりに空白も表示される
+        code:ソースコード
+        var:変数名
+        kbd:入力をマークアップ
+        samp:出力をマークアップ
+        -->
+        <pre>
+            <code>
+                const para = document.querySelector('p');
+                para.onclick = function() {
+                    alert('Owww, stop poking me!');
+                }
+            </code>
+        </pre>
+        <p>
+            You shouldn't use presentational elements like
+            <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>
+            .
+        </p>
+        <p>
+            In the above JavaScript example, <var>para</var> represents a paragraph element.
+        </p>
+        <p>
+            Select all the text with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>A</kbd>.
+        </p>
+        <pre>
+            $<kdb>ping mozilla.org</kdb>
+            <samp>
+                PING mozilla.org (63.245.215.20): 56 data bytes 64 bytes from 63.245.215.20: icmp_seq=0 ttl=40 time=158.233 ms
+            </samp>
+        </pre>
+
+        <!-- 日付と時刻をマークアップする -->
+        <time datetime="2016-01-20">20 January 2016</time>
+
+        <!-- Standard simple date -->
+        <time datetime="2016-01-20">20 January 2016</time>
+        <!-- Just year and month -->
+        <time datetime="2016-01">January 2016</time>
+        <!-- Just month and day -->
+        <time datetime="01-20">20 January</time>
+        <!-- Just time, hours and minutes -->
+        <time datetime="19:30">19:30</time>
+        <!-- You can do seconds and milliseconds too! -->
+        <time datetime="19:30:01.856">19:30:01.856</time>
+        <!-- Date and time -->
+        <time datetime="2016-01-20T19:30">7.30pm, 20 January 2016</time>
+        <!-- Date and time with timezone offset -->
+        <time datetime="2016-01-20T19:30+01:00">7.30pm, 20 January 2016 is 8.30pm in France</time>
+        <!-- Calling out a specific week number -->
+        <time datetime="2016-W04">The fourth week of 2016</time>
+        
+    </body>
+</html>
