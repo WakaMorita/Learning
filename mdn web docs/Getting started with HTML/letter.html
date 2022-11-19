@@ -30,25 +30,26 @@
         </style>
     </head>
     <body>
-        <p>
+        <p class="sender-column">
             <strong>
                 <em>Dr. Eleanor Gaye<br></em>
             </strong>
             Awesome Science faculty
-            <address>
+            <address class="sender-column">
                 University of Awesome<br>
                 Bobtown, CA 99999,<br>
                 USA<br>
             </address>
-            <strong>
-                <em>
-                    Tel: 123-456-7890<br>
-                    Email: no_reply@example.com<br>
-                </em>
-            </strong>
-            
-            <time="2016-01-20">20 January 2016<br></time>
-
+        </p>
+        <p class="sender-column">
+            <em >
+                <strong >Tel</strong>: 123-456-7890<br>
+                <strong>Email</strong>: no_reply@example.com<br>
+            </em>
+            <time datetime="2016-01-20">20 January 2016<br></time>
+        </p>
+        
+        <p>
             <strong><em>Miss Eileen Dover</em></strong>
             <address>
                 4321 Cliff Top Edge<br>
@@ -69,14 +70,14 @@
         </p>
 
         <ul>
-            <li>First semester: 9 September 2016</li>
-            <li>Second semester: 15 January 2017</li>
-            <li>Third semester: 2 May 2017</li>
+            <li>First semester: <time datetime="2016-09-08">9 September 2016</time></li>
+            <li>Second semester: <time datetime="2017-01">January 2017</time></li>
+            <li>Third semester: <time datetime="2017-05-02"></time>2 May 2017</li>
         </ul>
 
         <p>
             Please let me know if this is ok, and if so which start date you would prefer.<br>
-            You can find more information about important university dates on our website.
+            You can find more information about <a href="http://example.com">important university dates</a> on our website.
         </p>
         <h2>Subjects of study</h2>
 
@@ -85,7 +86,7 @@
             <ol>
                 <li>Turning H<sub>2</sub>O into wine, and the health benefits of Resveratrol (C<sub>14</sub>H<sub>12</sub>O<sub>3</sub>.)</li>
                 <li>Measuring the effect on performance of funk bassplayers at temperatures exceeding 30°C (86°F), when the audience size exponentially increases (effect of 3 × 10<sup>3</sup> increasing to 3 × 10<sup>4</sup>.)</li>
-                <li><abbr="HTML">HTML</abbr> and <abbr>CSS</abbr> constructs for representing musical scores.</li>
+                <li><abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> constructs for representing musical scores.</li>
             </ol>
             So please can you provide more information on each of these subjects, including how long you'd expect the research to take, required staff and other resources, and anything else you think we'd need to know? Thanks.<br>
         </p>
@@ -109,12 +110,12 @@
                 </dd>
             </dl>
             
-            For more of my research, see my exotic dance research page.<br>
+            For more of my research, see my <a href="http://example.com">exotic dance research page.</a><br>
 
             Yours sincerely,<br>
             Dr Eleanor Gaye<br>
 
-            University of Awesome motto: "Be awesome to each other." -- The memoirs of Bill S Preston, Esq<br>
+            University of Awesome motto: <blockquote>"Be awesome to each other."</blockquote> -- The memoirs of Bill S Preston, Esq<br>
         </p>
     </body>
 </html>
