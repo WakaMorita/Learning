@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" name="author" content="ImageInHTML">
+    </head>
+    <body>
+        <!-- 
+            画像のサイズは原則ではCSSで行う
+            titleは推奨されない
+            altとfigcaptionは重複して出る可能性があるので異なる内容を表示すべき
+            単純な装飾の場合はCSSを利用する。HTMLの画像には意味のあるものを利用すること
+        -->
+        <img 
+            src="Cat1.jfif"
+            alt="オレンジ色の猫のキャラクター"
+            width="400"
+            height="341"
+            title="猫の絵"
+        >
+        <img src="image/cat2.jfif" alt="猫がこちらを見ている">
+        <a href="https://ja.wikipedia.org/wiki/%E3%83%8D%E3%82%B3">
+            <img 
+                src="Cat1.jfif"
+                title="猫の写真"
+            >
+        </a>
+        <img 
+            src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+            alt="dinosaur_small"
+            width="200"
+            height="171"
+            title="dinosaur_small"
+        >
+        <div class="figure">
+            <img 
+                src="image/cat2.jfif"
+                alt="リアルなのこの写真"
+                width="400"
+                height="341"
+            >
+            <p>かわいい猫の絵</p>
+        </div>
+        <figure>
+            <img 
+            src="image/cat2.jfif"
+            alt="リアルなのこの写真"
+            width="400"
+            height="341"
+            >
+            <figcaption>かわいい猫の絵</figcaption>
+        </figure>
+        <figure>
+            <img 
+            src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+            alt="dinosaur_small"
+            width="200"
+            height="171"
+            >
+            <figcaption>A T-Rex on display in the Manchester University Museum</figcaption>
+        </figure>
+    </body>
+</html>
