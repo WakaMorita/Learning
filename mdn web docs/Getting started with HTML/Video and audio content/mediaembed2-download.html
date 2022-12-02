@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Media/embedding: Task 2</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      video {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Video embed</h1>
+
+    <video controls width="320" height="240" muted>
+      <source src="media/rabbit320.mp4" type="video/mp4">
+      <source src="media/rabbit320.webm" type="video/webm">
+      <p>お使いのブラウザーはこの動画ファイルに対応していません。その代わりに<a href="media/rabbit320.mp4">動画へのリンク</a>があります。</p>
+    </video>
+  </body>
+
+</html>
