@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <div id="main" v-on:mousemove="onmousemove">
+            screen: {{ screenX }}/{{ screenY }}<br />
+            page: {{ pageX }}/{{ pageY }}<br />
+            client: {{ clientX }}/{{ clientY }}<br />
+            offset: {{ offsetX }}/{{ offsetY }}<br />
+        </div>
+    </div>
+<script src="../lib/vue.js"></script>
+<script src="js/event_point.js"></script>
+</body>
+</html>
