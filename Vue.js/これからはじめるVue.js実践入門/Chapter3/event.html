@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="onclick">クリック</button>
+        <!-- event 別解 
+            ①直接書く　可読性は下がるので暫定的に中を確認するときなどにとどめる方が良い
+            <button v-on:click="message = new Date().toLocaleString()">クリック</button>
+        
+            ②メソッドを呼び出す　引数をもたせることなどが可能
+            <button v-on:click="onclick()">クリック</button>
+
+            ③省略構文
+            <button @click="onclick">クリック</button>
+        -->
+        <p>{{ message }}</p>
+    </div>
+<script src="../lib/vue.js"></script>
+<script src="js/event.js"></script>
+</body>
+</html>
