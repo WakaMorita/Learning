@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>Vue.js</title>
+</head>
+<body>
+    <link ref="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <div id="app">
+        <table class="table">
+            <th>ISBN</th><th>書名</th>価格<th>
+            <tr v-for="(b,i) in books">
+                <td>{{ i+1 }}</td>
+                <td>{{ b.isbn }}</td>
+                <td>{{ b.title }}</td>
+                <td>{{ b.price }}円</td>          
+            </tr>
+        </table>
+    </div>
+<script src="../lib/vue.js"></script>
+<script src="js/for_index.js"></script>
+</body>
+</html>
