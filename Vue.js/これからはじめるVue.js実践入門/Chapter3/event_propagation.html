@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <title>Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <div id="parent" v-on:click.capture="onParentClick"> -->
+        <div id="parent" v-on:click="onParentClick">
+            親要素
+            <!-- <div id="my" v-on:click.self="onMyClick"> -->
+            <!-- <div id="my" v-on:click.capture="onMyClick">
+                現在要素
+                 coment <div id="child" v-on:click.stop="onChildClick">
+                <div id="child" v-on:click.capture.stop="onChildClick">
+                    子要素
+                </div>
+            </div> -->
+            <div id="my" v-on:click.self.stop="onMyClick">
+                現在要素
+                <!-- <div id="child" v-on:click.stop="onChildClick"> -->
+                <div id="child" v-on:click="onChildClick">
+                    子要素
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="../lib/vue.js"></script>
+<script src="js/event_propagation.js"></script>
+</body>
+</html>
