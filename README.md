@@ -15,7 +15,7 @@
 <h3 id="Agile">アジャイル</h3>
 <p>アジャイルに関する学習</p>
 <ul>
-    <li href="https://github.com/WakaMorita/Learning/blob/master/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E3%81%AE%E6%89%8B%E5%BC%95%E3%81%8D.md">オリジナルアジャイルの手引き</li>
+    <li><a href="href="https://github.com/WakaMorita/Learning/blob/master/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E3%81%AE%E6%89%8B%E5%BC%95%E3%81%8D.md"" target="_blank">オリジナルアジャイルの手引き</li>
     <p>
     <a href="https://amzn.asia/d/8XiyLyR" target="_blank">
     参考文献：アジャイルサムライ　ー達人開発者への道
