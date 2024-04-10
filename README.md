@@ -4,6 +4,8 @@
 <ul>
     <li><a href="#Agile">アジャイル</a></li>
     <p>アジャイルに関する学習</p>
+    <li><a href="#Nuxt3">Nuxt3</a></li>
+    <p>Nuxt3に関する学習</p>
     <li><a href="#docker">Docker</a></li>
     <p>Dockerに関する学習</p>
     <li><a href="#mdn">mdn web docks</a></li>
@@ -20,6 +22,14 @@
     <a href="https://amzn.asia/d/8XiyLyR" target="_blank">
     参考文献：アジャイルサムライ　ー達人開発者への道
     </p>
+    <li></li>
+</ul>
+
+<h3 id="Nuxt3">Nuxt3</h3>
+<p>Nuxt3に関する学習</p>
+<ul>
+    <li>Nuxt3 フロントエンド開発の教科書</li>
+    <p>書籍「Nuxt3 フロントエンド開発の教科書」についての学習内容のまとめ</p>
     <li></li>
 </ul>
 
