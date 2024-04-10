@@ -17,7 +17,10 @@
 <h3 id="Agile">アジャイル</h3>
 <p>アジャイルに関する学習</p>
 <ul>
-    <li><a href="https://github.com/WakaMorita/Learning/blob/master/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E3%81%AE%E6%89%8B%E5%BC%95%E3%81%8D.md" target="_blank">オリジナルアジャイルの手引き</li>
+    <li>
+    <a　href="https://github.com/WakaMorita/Learning/blob/master/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB/%E3%82%A2%E3%82%B8%E3%83%A3%E3%82%A4%E3%83%AB%E3%81%AE%E6%89%8B%E5%BC%95%E3%81%8D.md" target="_blank">
+        オリジナルアジャイルの手引き
+    </li>
     <p>
     <a href="https://amzn.asia/d/8XiyLyR" target="_blank">
     参考文献：アジャイルサムライ　ー達人開発者への道
@@ -28,10 +31,13 @@
 <h3 id="Nuxt3">Nuxt3</h3>
 <p>Nuxt3に関する学習</p>
 <ul>
-    <li>Nuxt3 フロントエンド開発の教科書</li>
-    <p>
+    <li>
+    <a href="https://github.com/WakaMorita/Learning/blob/master/Nuxt3/Nuxt3.md" target="_blank">
+    Nuxt3
+    </li>
     <a href="https://gihyo.jp/book/2023/978-4-297-13685-7" target="_blank">
-    書籍「Nuxt3 フロントエンド開発の教科書」についての学習内容のまとめ</p>
+    参考文献：Nuxt3 フロントエンド開発の教科書
+    </p>
     <li></li>
 </ul>
 
