@@ -30,7 +30,7 @@
 <ul>
     <li>Nuxt3 フロントエンド開発の教科書</li>
     <p>
-    <a href="[https://amzn.asia/d/8XiyLyR](https://gihyo.jp/book/2023/978-4-297-13685-7)" target="_blank">
+    <a href="https://gihyo.jp/book/2023/978-4-297-13685-7" target="_blank">
     書籍「Nuxt3 フロントエンド開発の教科書」についての学習内容のまとめ</p>
     <li></li>
 </ul>
