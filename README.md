@@ -35,6 +35,7 @@
     <a href="https://github.com/WakaMorita/Learning/blob/master/Nuxt3/Nuxt3.md" target="_blank">
     Nuxt3
     </li>
+    <p>
     <a href="https://gihyo.jp/book/2023/978-4-297-13685-7" target="_blank">
     参考文献：Nuxt3 フロントエンド開発の教科書
     </p>
