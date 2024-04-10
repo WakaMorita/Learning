@@ -46,7 +46,10 @@
 <p>Dockerに関する学習</p>
 <ul>
     <li>Docker＆Kubernetesのきほんのきほん</li>
-    <p>書籍「Docker＆Kubernetesのきほんのきほん」についての学習内容のまとめ</p>
+    <p>
+    <a href="https://tatsu-zine.com/books/docker-kubernetes-kihon-kihon" target="_blank">
+    参考文献：Docker＆Kubernetesのきほんのきほん
+    </p>
     <li></li>
 </ul>
 
@@ -75,6 +78,9 @@
 <p>Vue.jsに関する学習</p>
 <ul>
     <li>これからはじめるVue.js実践入門</li>
-    <p>書籍「これからはじめるVue.js実践入門」についての学習内容のまとめ</p>
+    <p>
+    <a href="https://www.amazon.co.jp/%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E3%81%AF%E3%81%98%E3%82%81%E3%82%8BVue-js%E5%AE%9F%E8%B7%B5%E5%85%A5%E9%96%80-%E5%B1%B1%E7%94%B0-%E7%A5%A5%E5%AF%9B/dp/4815601828/ref=tmm_hrd_swatch_0?_encoding=UTF8&qid=&sr=" target="_blank">
+    参考文献：これからはじめるVue.js実践入門
+    </p>
     <li></li>
 </ul>
