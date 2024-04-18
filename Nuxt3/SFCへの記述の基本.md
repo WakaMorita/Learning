@@ -212,6 +212,16 @@ onRenderTracked(
 ```
 {{ 変数 }}
 ```
+<details><summary>おまけ：ディレクティブとは</summary>
+接頭辞 v- で始まるテンプレート属性、または同等のショートハンドでDOM操作の実現を可能にしている
+
+＊DOM操作とは
+HTMLやXMLなどのマークアップ言語をプログラミング言語で操作すること。
+Webページの見た目を変化させることが出来る。
+
+>https://ja.vuejs.org/glossary/#directive
+</details>
+
 ## ◆ 属性に変数をバインドするv-bind
 ```
 v-bind:属性名="テンプレート変数"
@@ -221,6 +231,7 @@ v-bind:属性名="テンプレート変数"
 ```
 <a v-bind:href="url" target="_blank">Nuxt.jsのサイト</a>
 ```
+>https://ja.vuejs.org/api/built-in-directives.html#v-bind
 </details>
 
 ## ◆ イベントを設定するv-on
@@ -232,6 +243,7 @@ v-on:イベント名="イベント発生時に実行するメソッド名"
 ```
 <button v-on:click="onButtonClick('Hello',$event)">こんにちわ</button>
 ```
+>https://ja.vuejs.org/api/built-in-directives.html#v-on
 </details>
 
 ## ◆ 双方向データバインディングのv-model
@@ -244,4 +256,205 @@ v-model="テンプレート変数"
 ```
 <input type="text" v-model="inputNameModel">
 ```
+>https://ja.vuejs.org/api/built-in-directives.html#v-model
 </details>
+
+## ◆ HTML文字列をそのまま表示させるv-html
+```
+v-html="HTML記述のテンプレート変数"
+```
+
+<details><summary>例</summary>
+
+```
+<section v-html="htmlStr"></section>
+```
+v-htmlについて
+*　<p>テキスト</p>のような文字列をhtmlタグとして認識させたい場合に利用する
+
+◇マスタッシュ構文を利用した場合
+```
+<template>
+  <div>{{ sampleText }}</div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      sampleText: "<h1>Text1</h1> <br /> <h2>Text2</h2>",
+    };
+  },
+};
+</script>
+```
+出力結果
+
+![alt text](image.png)
+
+
+◇v-htmlを利用した場合
+```
+<template>
+  <span v-html="sampleText"></span>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      sampleText: "<h1>Text1</h1> <br /> <h2>Text2</h2>",
+    };
+  },
+};
+</script>
+```
+出力結果
+
+![alt text](image-1.png)
+
+⁂注意点
+1.スタイルが適用されない
+2.XSS(クロスサイトスクリプティング)の危険がある
+　→信頼できるコンテンツ外で利用しない
+　→ユーザー入力に関係する箇所では使わない
+
+>https://jp.vuejs.org/v2/api/index.html#v-html
+</details>
+
+## ◆ 静的コンテンツ表示のv-pre
+マスタッシュ構文を含め配下タグ内のテンプレート記述を全て無効化しそのまま表示させる
+
+<details><summary>例</summary>
+
+```
+<section v-pre>
+  <p v-on:click="showHello">{{hello!}}</p>
+</section>
+```
+>https://ja.vuejs.org/api/built-in-directives#v-pre
+</details>
+
+## ◆ データバインディングを初回のみに制限するv-once
+データバインディングを初回の1回のみ実施する
+
+<details><summary>例</summary>
+
+```
+<p v-once>金額は{{price}}円です。</p>
+```
+>https://ja.vuejs.org/api/built-in-directives#v-once
+</details>
+
+## ◆ マスタッシュ構文の非表示に役立つv-cloak
+マスタッシュ構文がレンダリングされる前に一瞬そのまま表示されてしまわないように一時的に非表示にするディレクティブ
+
+<details><summary>例</summary>
+
+```
+<templete>
+  <p v-cloak>{{hello}}</p>
+</templete>
+<style>
+[v-cloak] {
+  display: none;
+}
+</style>
+```
+仕組み
+1.マスタッシュ構文がレンダリングされてhelloの値がpタグに表示されるまでV-cloak属性がつく
+2.hello表示と同時にV-cloak属性が削除される
+>https://ja.vuejs.org/api/built-in-directives.html#v-cloak
+</details>
+
+## ◆ 条件分岐のv-if
+式の真偽によって条件付きでレンダリングする(条件に満たない場合はレンダリングされない)
+```
+v-if = "条件"
+  処理
+v-else-if = "条件"  
+  処理
+v-else
+  処理  
+```
+<details><summary>例</summary>
+
+```
+<p>
+  点数は{{randomNumber}}点で
+  <span v-if="randomNumber >= 80">優です。</span>
+  <span v-else-if="randomNumber >= 70">良です。</span>
+  <span v-else-if="randomNumber >= 60">可です。</span>
+  <span v-else>不可です。</span>
+</p>
+*v-ifはv-forよりも高い優先度を持つ。この2つのディレクティブを1つの要素で同時に使うことは推奨しない
+```
+>https://ja.vuejs.org/api/built-in-directives.html#v-if
+>https://ja.vuejs.org/api/built-in-directives.html#v-else-if
+>https://ja.vuejs.org/api/built-in-directives.html#v-else
+
+</details>
+
+## ◆ 表示と非表示の切り替えを行うv-show
+式の真偽によって要素の可視性を切り替える(レンダリングは実施されstyleのdisplay:noneが適用されている)
+```
+v-show="条件"
+```
+
+<details><summary>例</summary>
+
+```
+<p v-show="showOrNot">
+  条件に合致した場合表示する
+</p>
+```
+>https://ja.vuejs.org/api/built-in-directives.html#v-show
+</details>
+
+
+
+<details><summary>v-ifとv-showの使い分けについて</summary>
+
+v-if：表示、非表示のレンダリングコストがかかるので、
+表示、非表示が画面表示段階で決まっている場合
+
+v-show：初回レンダリングコストはかかるが表示、非表示の切り替えコストは低いので
+画面表示後に表示、非表示が頻繁に切り替わる場合
+>https://ja.vuejs.org/api/built-in-directives.html#v-if
+>https://ja.vuejs.org/api/built-in-directives.html#v-show
+</details>
+
+## ◆ ループ処理のv-for
+元となるデータに基づいて、要素またはテンプレートブロックを複数回レンダリングする。
+```
+v-for="エイリアス　in ループ対象"
+```
+### ～配列～
+
+配列のv-for
+```
+v-for="各要素を格納する変数　in ループ対象"
+or
+v-for="(各要素を格納する変数, インデックス値を格納する変数)　in ループ対象"
+```
+
+<details><summary>例</summary>
+
+```
+<ul>
+  <li
+    v-for="(cocktailName, index) in cocktailList"
+    v-bind:key ="cocktailName">
+    {{cocktailName}}(インデックス{{index}})
+  </li>
+</ul>
+```
+*基本的にはv-forには基本的にはv-bind:key(:key)を指定する必要がある
+(詳細については引用２，３参照)
+>https://ja.vuejs.org/api/built-in-directives.html#v-for
+>https://ja.vuejs.org/guide/essentials/list.html#maintaining-state-with-key
+>https://note.com/shift_tech/n/nbcae6c4ab442
+</details>
+
+### ～～
+### ～～
