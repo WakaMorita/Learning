@@ -456,5 +456,47 @@ v-for="(各要素を格納する変数, インデックス値を格納する変�
 >https://note.com/shift_tech/n/nbcae6c4ab442
 </details>
 
-### ～～
-### ～～
+### ～オブジェクト～
+オブジェクトのv-for
+```
+v-for="(各プロパティの値を格納する変数, 各プロパティ名を格納する変数)　in ループ対象"
+or
+v-for="(各プロパティの値を格納する変数, 各プロパティ名を格納する変数, インデックス値を格納する変数)　in ループ対象"
+```
+<details><summary>例</summary>
+
+```
+<dl>
+  <template
+    v-for="(value, key) in whiteLady"
+    v-bind:key="key"
+  >
+  <dt>{{ key }}</dt>
+  <dd>{{ value }}</dd>
+  </template>
+</dl>
+```
+*制御ディレクティブでのtemplateタグ
+上記例のdtタグ、ddタグのようにワンセットまとめてのループが必要な場合はtemplateタグを利用してループする
+</details>
+
+### ～Map～
+Mapのv-for
+```
+v-for="[各要素のキーを格納する変数, 各要素の値を格納する変数]　in ループ対象"
+```
+<details><summary>例</summary>
+
+```
+<ul>
+  <li
+    v-for="[id, cocktailName] in cocktailList"
+    v-bind:key ="id">
+    IDが{{id}}のカクテルは{{cocktailName}}
+  </li>
+</ul>
+
+```
+*連想配列とMap
+連想配列はインデックスシグネチャでオブジェクトと同じように利用可能
+</details>
