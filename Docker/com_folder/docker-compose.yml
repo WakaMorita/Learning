@@ -1,0 +1,56 @@
+# Docker Composeのバージョンを指定（3.8は比較的新しいバージョン）
+version: '3.8'
+# サービス（コンテナ）の定義を開始
+services:
+  # MySQLデータベースのサービス設定
+  mysql000ex11:
+    # 使用するMySQLのバージョンを指定
+    image: mysql:5.7
+    # このサービスが属するネットワークを指定
+    networks:
+      - wordpress000net1
+    # データを永続化するためのボリュームをマウント
+    volumes:
+      - mysql000vol11:/var/lib/mysql
+    # コンテナが停止した場合、自動的に再起動
+    restart: always
+    # MySQLの環境変数を設定
+    environment:
+      MYSQL_ROOT_PASSWORD: myrootpass     # rootユーザーのパスワード
+      MYSQL_DATABASE: wordpress000db      # 作成するデータベース名
+      MYSQL_USER: wordpress000kun         # 作成するMySQLユーザー
+      MYSQL_PASSWORD: wkunpass           # 作成するユーザーのパスワード
+
+  # WordPressのサービス設定
+  wordpress0000ex12:
+    # MySQLサービスが起動してから、このサービスを開始
+    depends_on:
+      - mysql000ex11
+    # 最新のWordPressイメージを使用
+    image: wordpress:latest
+    # このサービスが属するネットワークを指定
+    networks:
+      - wordpress000net1
+    # WordPressのファイルを永続化するためのボリュームをマウント
+    volumes:
+      - wordpress000vol12:/var/www/html
+    # ホストのポート8085をコンテナのポート80に接続（ブラウザからアクセスするためのポート）
+    ports:
+        - "8085:80"
+    # コンテナが停止した場合、自動的に再起動
+    restart: always
+    # WordPressの環境変数を設定（MySQLへの接続情報）
+    environment:
+      WORDPRESS_DB_HOST: mysql000ex11:3306      # MySQLサービスのホスト名とポート
+      WORDPRESS_DB_USER: wordpress000kun         # MySQLのユーザー名
+      WORDPRESS_DB_PASSWORD: wkunpass           # MySQLのパスワード
+      WORDPRESS_DB_NAME: wordpress000db         # 使用するデータベース名
+
+# 使用するネットワークの定義
+networks:
+  wordpress000net1:    # WordPressとMySQLが通信するための内部ネットワーク
+
+# 永続化するデータの保存場所（ボリューム）の定義
+volumes:
+  mysql000vol11:       # MySQLのデータを保存するボリューム
+  wordpress000vol12:   # WordPressのファイルを保存するボリューム
